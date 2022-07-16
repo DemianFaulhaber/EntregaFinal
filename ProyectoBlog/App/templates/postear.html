@@ -1,0 +1,12 @@
+{% extends 'core.html' %}
+{% load static %}
+{% block title %} posting... {% endblock %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button>Postear</button>
+</form>
+
+{% endblock %}

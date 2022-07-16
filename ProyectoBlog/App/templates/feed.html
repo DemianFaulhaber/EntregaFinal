@@ -1,0 +1,11 @@
+{% extends "core.html" %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+        <button><a class="nav-link" href=" {% url 'postear' %}">posteá vos también!</a></button>
+    <ul>
+    {% for post in posteos %}
+        <li>{{ post }}</li>
+        <button><a href="{% url 'eliminar' post.id %}">Eliminar</a></button>
+    {% endfor %}
+    </ul>
+{%endblock%}
